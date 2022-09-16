@@ -1,0 +1,19 @@
+body
+{  
+   padding-bottom: 23px;
+   width: 500px;
+    padding-right: 70px;
+    margin: 0 auto;
+    background-image: url(https://wallpapercave.com/w/wp2036458.jpg);
+    background-position: center;
+    position: relative;
+    overflow-x:hidden;
+    background-size: cover;
+
+}
+#Login
+{
+   
+ background: blanchedalmond;
+
+}
