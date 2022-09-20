@@ -1,0 +1,14 @@
+CREATE TABLE ownerinformation( Id int NOT NULL AUTO_INCREMENT, FirstName varchar(255) NOT NULL, LastName varchar(255) NOT NULL, IDNumber INT(10) NOT NULL,PhoneNumber varchar(255) NOT NULL, Email varchar(255) NOT NULL, Age INT(10) NOT NULL, Gender VARCHAR(255) NOT NULL, Location VARCHAR(255) NOT NULL, PRIMARY KEY (Id));
+
+
+CREATE TABLE petdetails (DogLicenseNumber int NOT NULL AUTO_INCREMENT, Name varchar(255) NOT NULL, Age int(10) NOT NULL, Color varchar(255) NOT NULL, OwnerID int(10) NOT NULL, Gender varchar(255) NOT NULL, Breed varchar(255) NOT NULL, Vaccines varchar(255) NOT NULL, DogImage BLOB NOT NULL, PRIMARY KEY(DogLicenseNumber));
+ALTER TABLE petdetails AUTO_INCREMENT=1001;
+
+
+CREATE TABLE vetdetails( Id int NOT NULL AUTO_INCREMENT, FirstName varchar(255) NOT NULL, LastName varchar(255) NOT NULL, IDNumber INT(10) NOT NULL,PhoneNumber varchar(255) NOT NULL, Email varchar(255) NOT NULL, Gender VARCHAR(255) NOT NULL, Location VARCHAR(255) NOT NULL, PRIMARY KEY (Id));
+
+CREATE TABLE inspection(Id INT NOT NULL AUTO_INCREMENT, OwnerID int(10) NOT NULL, enthusiasm int(10) not null, walk int(10) not null, vaccine int(10) not null, exercise int(10) not null, trained int (10) not null, interacts int(10) not null, healthy int(10) not null, active int(10) not null, PRIMARY KEY (Id));
+
+
+CREATE TABLE admindetails( Id int NOT NULL AUTO_INCREMENT, FirstName varchar(255) NOT NULL, LastName varchar(255) NOT NULL, IDNumber INT(10) NOT NULL,PhoneNumber varchar(255) NOT NULL, Email varchar(255) NOT NULL, Age INT(10) NOT NULL, Gender VARCHAR(255) NOT NULL, Location VARCHAR(255) NOT NULL, PRIMARY KEY (Id));
+
