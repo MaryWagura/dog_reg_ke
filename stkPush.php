@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 require_once('access_token.php');
 
 $userData = file_get_contents('php://input');
@@ -44,8 +47,6 @@ $BusinessShortCode='174379';
 $Amount=$data->Amount;
 $PhoneNumber=$data->telNum;
 $CallBackURL=' https://still-scrubland-73108.herokuapp.com/callback_lnm.php';
-//$validationURL='https://radiant-castle-32278.herokuapp.com/callback_lnm.php';
-// $CallBackURL= 'http://'.$ipaddress.'/Payment.php';
 $AccountReference=$data->accRef;
 $TransactionDesc='Dog Registration Kenya';
 $passkey="bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919";
