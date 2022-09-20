@@ -4,12 +4,12 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 echo "bhjnmk";
-echo $cliName;
+
 
 if (isset($_POST['submit'])) {
 
 	$cliName=$_POST['name'];
-	echo $cliName;
+	var_dump ($cliName);
 	$cliID=$_POST['IDNumber'];
 	$licenseNum=$_POST['DogLicenseNumber'];
 	$telNum=$_POST['phonenumber'];
