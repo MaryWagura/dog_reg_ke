@@ -143,5 +143,8 @@ function mpesaSendMoney($phone_no, $total_amt, $accRef, $access_token ){
   echo $curl_response;
   sleep(5);
 }
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 ?>

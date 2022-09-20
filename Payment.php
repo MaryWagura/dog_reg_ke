@@ -79,12 +79,12 @@ $DogLicenseNumber=$_SESSION["DogLicenseNumber"];
 		    <input type="text" class="form-control" name="DogLicenseNumber" value=" KEN <?php echo $DogLicenseNumber;?>"required readonly><br><br>
 		     <p><b>Amount to Pay: 2000</p></b>
 		     <label for="phonenumber"><b>Input Your Phone Number</label><br><br></b>
-		    <input type="text" class="form-control" name="phonenumber" placeholder="07" required><br><br>	   
+		    <input type="text" class="form-control" name="phonenumber" id="phonenumber" placeholder="07" required><br><br>	   
 		
                                             
                                         <div class="form-group">
                                              <a href="pay.php">
-                                        	 <input type="button" name="submit" id="submit" class="btnContactSubmit" value="Pay">
+                                        	 <input type="button" name="submitpay" id="submitpay" class="btnContactSubmit" value="Pay">
                                             </a></div>
                                         	 
                                                <div class="form-group">

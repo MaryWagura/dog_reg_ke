@@ -1,6 +1,6 @@
 <?php
 
-require('../mpesaClasses/access_token.php');
+require('access_token.php');
 
 $userData = file_get_contents('php://input');
 // $ipaddress = getHostByName(getHostByName());
@@ -9,9 +9,23 @@ $userData = file_get_contents('php://input');
 $token =$access_token;
 $url = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
 
+
+$url = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
+$curl = curl_init(url);
+curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
+curl_setopt($curl, CURLOPT_HEADER, FALSE);
+curl_setopt($curl, CURLOPT_USERPWD, $consumerKey.":".$consumerSecret);
+
+$result=curl_exec($curl);
+$status=curl_getinfo($curl,CURLINFO_HTTP_CODE);
+$result=json_decode($result);
+
+$access_token=$result->access_token;
+
 $curl = curl_init();
 curl_setopt($curl, CURLOPT_URL, $url);
-curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type:application/json',"Authorization:Bearer $token"));
+curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type:application/json',"Authorization:Bearer" .$access_token));
 
 
 if (date('G')<10)

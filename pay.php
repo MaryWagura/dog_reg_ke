@@ -3,21 +3,27 @@ require_once('Lipa-Mpesa.php');
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-echo "bhjnmk";
 
 
-if (isset($_POST['submit'])) {
 
-	$cliName=$_POST['name'];
-	var_dump ($cliName);
-	$cliID=$_POST['IDNumber'];
-	$licenseNum=$_POST['DogLicenseNumber'];
-	$telNum=$_POST['phonenumber'];
+if (isset($_POST['submitpay'])) {
+
+	//$cliName=$_POST['name'];
+
+	// $cliID=$_POST['IDNumber'];
+	// $licenseNum=$_POST['DogLicenseNumber'];
+	// $telNum=$_POST['phonenumber'];
+	// $amount=1;
+	// $accRef=$_POST['DogLicenseNumber'];
+	// echo "string";
+	//  $access_token = accessTokenGenerator();
+	//  mpesaSendMoney($telNum, $amount, $accRef, $access_token );
+	
+	$phonenumber=$_POST['phonenumber'];
 	$amount=1;
-	$accRef=$_POST['DogLicenseNumber'];
-	echo "string";
+	$accRef="Dog Registration Kenya";
 	 $access_token = accessTokenGenerator();
-	 mpesaSendMoney($telNum, $amount, $accRef, $access_token );
+	 mpesaSendMoney($phonenumber, $amount, $accRef, $access_token );
 	
 
 
