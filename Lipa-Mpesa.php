@@ -103,9 +103,9 @@ function mpesaSendMoney($phone_no, $total_amt, $accRef, $access_token ){
   $Timestamp = date('YmdGis');
   $PartyA = '254'.$phone_no;//25491278088
   //$CallBackURL = 'https://76921b4f.ngrok.io/LNM/callback_lnm.php';
-   $CallBackURL = 'http://'.$localIP.'/LNM/callback_lnm.php';
+   $CallBackURL = 'https://thawing-cliffs-60810.herokuapp.com/callback_lnm.php';
   $AccountReference = $accRef; 
-  $TransactionDesc =  'Dog Reg ';
+  $TransactionDesc =  'Dog Reg Ke';
   $Amount = $total_amt;
   $Passkey = 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919';
   $Password=base64_encode($BusinessShortcode.$Passkey.$Timestamp);

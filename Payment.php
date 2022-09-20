@@ -83,7 +83,7 @@ $DogLicenseNumber=$_SESSION["DogLicenseNumber"];
 		
                                             
                                         <div class="form-group">
-                                             <a href="Pay.php">
+                                             <a href="pay.php">
                                         	 <input type="button"  class="btnContactSubmit" value="Pay">
                                             </a></div>
                                         	 

@@ -38,8 +38,8 @@ if($ResultCode==0)
 	);
 	}
 $servername = "localhost";
-$username = "root";
-$password = "";
+$username = "root1";
+$password = "password";
 $dbname = "dogregistrationke";
 // Create connection
 $dbname= new mysqli($servername, $username, $password,$dbname);
@@ -47,19 +47,19 @@ $dbname= new mysqli($servername, $username, $password,$dbname);
 if ($dbname->connect_error) {
     die("Connection failed: " . $dbname->connect_error);
 } 
-$LicenseNumber=$_POST['LicenseNumber'];
-$MpesaInvoice=$_POST ['MpesaInvoice'];
+// $LicenseNumber=$_POST['LicenseNumber'];
+// $MpesaInvoice=$_POST ['MpesaInvoice'];
 
 
-	  $sql = "INSERT INTO paymentdetials(LicenseNumber, MpesaInvoice)
-     VALUES ('$LicenseNumber', '$MpesaInvoice)";
+// 	  $sql = "INSERT INTO paymentdetials(LicenseNumber, MpesaInvoice)
+//      VALUES ('$LicenseNumber', '$MpesaInvoice)";
 
-        if ($dbname->query($sql) === TRUE) {
-    echo "Records entered successfully";
- header('Location:Registerpet.php');
-} else {
-    echo "Error: " . $sql . "<br>" . $dbname->error;
-}
-$insert= $dbname->query("SELECT LicenseNumber, MpesaInvoice FROM paymentdetials");
+//         if ($dbname->query($sql) === TRUE) {
+//     echo "Records entered successfully";
+//  header('Location:Registerpet.php');
+// } else {
+//     echo "Error: " . $sql . "<br>" . $dbname->error;
+// }
+// $insert= $dbname->query("SELECT LicenseNumber, MpesaInvoice FROM paymentdetials");
 
 ?>
