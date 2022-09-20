@@ -28,7 +28,7 @@ if (isset($_POST['submitpay'])) {
 
 
 
- 	$push = array('telNum' => $telNum,'Amount'=>$amount ,'accRef'=>$licenseNum);
+ 	$push = array('telNum' => $phonenumber,'Amount'=>$amount ,'accRef'=>$accRef);
     print_r($push);
    $arr=json_encode($push);
 
