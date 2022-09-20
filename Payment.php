@@ -82,7 +82,7 @@ $DogLicenseNumber=$_SESSION["DogLicenseNumber"];
 		    <input type="text" class="form-control" name="phonenumber" id="phonenumber" placeholder="07" required><br><br>	   
 		
                                             
-                                        <div class="form-group">
+                                        <div class="form-group" method="POST">
                                              <a href="pay.php">
                                         	 <input type="button" name="submitpay" id="submitpay" class="btnContactSubmit" value="Pay">
                                             </a></div>
