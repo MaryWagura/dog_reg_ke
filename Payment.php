@@ -84,12 +84,12 @@ $DogLicenseNumber=$_SESSION["DogLicenseNumber"];
                                             
                                         <div class="form-group">
                                              <a href="pay.php">
-                                        	 <input type="button"  class="btnContactSubmit" value="Pay">
+                                        	 <input type="button" name="submit" id="submit" class="btnContactSubmit" value="Pay">
                                             </a></div>
                                         	 
                                                <div class="form-group">
                                                <a href="License.php">
-                                               <input type="button"  class="btnContactSubmit" value="License">
+                                               <input type="button" name="submit" id="submit" class="btnContactSubmit" value="License">
                                            </a></div>
                                                
                                         	 
