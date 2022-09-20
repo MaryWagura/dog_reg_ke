@@ -1,12 +1,12 @@
 <?php
-
+// echo $access_token;
 $consumerKey ="TEyJHlXQRBLAtRAGg6Kp57lwjkeQW9gF";
 $consumerSecret = "QPVuSn5EkRMak2GA";
 
-$headers=['Content-Type:application/json; Charset=utf8'];
+$headers=['Content-Type:application/json; charset=utf8'];
 
-$uri = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
-$curl=curl_init($uri);
+$url = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
+$curl=curl_init($url);
 curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($curl, CURLOPT_HEADER, FALSE);
@@ -18,6 +18,6 @@ $result=json_decode($result);
 
 $access_token=$result->access_token;
 
-// echo $access_token;
+//echo $access_token;
 curl_close($curl);
 ?>

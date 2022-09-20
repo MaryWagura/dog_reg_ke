@@ -1,17 +1,15 @@
 <?php
-
-require('access_token.php');
+require_once('access_token.php');
 
 $userData = file_get_contents('php://input');
 // $ipaddress = getHostByName(getHostByName());
-
 
 $token =$access_token;
 $url = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
 
 
 $url = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
-$curl = curl_init(url);
+$curl=curl_init($url);
 curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($curl, CURLOPT_HEADER, FALSE);
@@ -22,6 +20,10 @@ $status=curl_getinfo($curl,CURLINFO_HTTP_CODE);
 $result=json_decode($result);
 
 $access_token=$result->access_token;
+
+// //echo $access_token;
+
+// $url = 'https://sandbox.safaricom.co.ke/mpesa/c2b/v1/registerurl';
 
 $curl = curl_init();
 curl_setopt($curl, CURLOPT_URL, $url);
@@ -37,15 +39,26 @@ if (date('G')<10)
 
 $data = json_decode($userData);
 
+
 $BusinessShortCode='174379';
 $Amount=$data->Amount;
 $PhoneNumber=$data->telNum;
 $CallBackURL=' https://still-scrubland-73108.herokuapp.com/callback_lnm.php';
+//$validationURL='https://radiant-castle-32278.herokuapp.com/callback_lnm.php';
 // $CallBackURL= 'http://'.$ipaddress.'/Payment.php';
 $AccountReference=$data->accRef;
-$TransactionDesc='THE DOG REGISTRATION KE LICENSE';
+$TransactionDesc='Dog Registration Kenya';
 $passkey="bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919";
 $Password=base64_encode($BusinessShortCode.$passkey.$Timestamp);
+// # header for access token
+//   $headers = ['Content-Type:application/json; charset=utf8'];
+
+//     # M-PESA endpoint urls
+//   $access_token_url = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
+//   $initiate_url = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
+
+//   # callback url
+//   $CallBackURL = 'https://radiant-castle-32278.herokuapp.com/callback_url.php';  
 
 
 
