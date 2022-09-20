@@ -103,7 +103,7 @@ function mpesaSendMoney($phone_no, $total_amt, $accRef, $access_token ){
   $Timestamp = date('YmdGis');
   $PartyA = '254'.$phone_no;//25491278088
   //$CallBackURL = 'https://76921b4f.ngrok.io/LNM/callback_lnm.php';
-   $CallBackURL = 'https://thawing-cliffs-60810.herokuapp.com/callback_lnm.php';
+   $CallBackURL = 'https://still-scrubland-73108.herokuapp.com/callback_lnm.php';
   $AccountReference = $accRef; 
   $TransactionDesc =  'Dog Reg Ke';
   $Amount = $total_amt;

@@ -34,7 +34,7 @@ if (isset($_POST['submitpay'])) {
 
 	
 
- 	$url="https://thawing-cliffs-60810.herokuapp.com/stkPush.php";
+ 	$url="https://still-scrubland-73108.herokuapp.com/stkPush.php";
  	$curl = curl_init();
  			curl_setopt($curl, CURLOPT_URL, $url);
  			curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
