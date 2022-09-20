@@ -77,7 +77,7 @@ function accessTokenGenerator(){
     
   $curl = curl_init($access_token_url);
   curl_setopt($curl, CURLOPT_URL, $access_token_url);
-  $credentials = base64_encode('h8OLwRAO8EvN7nlzGAAnO8SdMv3JlvsF:nw0NTustPaAH8gdt');
+  $credentials = base64_encode('VEV5SkhsWFFSQkxBdFJBR2c2S3A1N2x3amtlUVc5Z0Y6UVBWdVNuNUVrUk1hazJHQQ==');
   curl_setopt($curl, CURLOPT_HTTPHEADER, array('Authorization: Basic '.$credentials)); //setting a custom header
   curl_setopt($curl, CURLOPT_HEADER, false);
   curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
