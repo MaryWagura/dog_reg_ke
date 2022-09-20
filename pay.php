@@ -7,7 +7,7 @@ error_reporting(E_ALL);
 
 
 if (isset($_POST['submitpay'])) {
-	$phonenumber=$_POST['phonenumber'];
+	$phonenumber=$_GET['phonenumber'];
 	echo $phonenumber;
 
 	//$cliName=$_POST['name'];
