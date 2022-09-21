@@ -68,7 +68,8 @@ $DogLicenseNumber=$_SESSION["DogLicenseNumber"];
                             <h3 class="register-heading">Payment Form</h3>
                             <div class="row register-form">
                                 <div class="col-md-12">
-                                    <form method="post">
+                        
+                                    <form action="pay.php" method="post">
                                         <div class="form-group">
                                             <label for="name"><b>Name:</label><br><br></b>
 		    <input type="text" class="form-control" name="name" value="<?php echo $FirstName; ?>" required readonly><br><br> </div>
@@ -83,13 +84,13 @@ $DogLicenseNumber=$_SESSION["DogLicenseNumber"];
 		
                                             
                                         <div class="form-group" method="POST">
-                                             <a href="pay.php">
+                                          
                                         	 <input type="submit" name="submitpay" id="submitpay" class="btnContactSubmit" value="Pay">
-                                            </a></div>
+                                            </div>
                                         	 
                                                <div class="form-group">
                                                <a href="License.php">
-                                               <input type="submit" name="submit" id="submit" class="btnContactSubmit" value="License">
+                                               <input type="button" name="submit" id="submit" class="btnContactSubmit" value="License">
                                            </a></div>
                                                
                                         	 

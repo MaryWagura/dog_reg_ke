@@ -5,6 +5,8 @@ $servername = "localhost";
 $username = "root1";
 $password = "password";
 $dbname = "dogregistrationke";
+
+if (isset($_POST['submit'])) {
 $FirstName=$_POST['FirstName'];
 $IDNumber=$_POST ['IDNumber'];
 
@@ -100,5 +102,6 @@ $IDNumber=$_POST ['IDNumber'];
  {
  	echo "Failed";
  }
+}
 ?>
 

@@ -87,12 +87,12 @@ span.psw {
 
   <div class="container">
     <label for="FirstName"><h3><b>First Name</label></b></h3>
-			    <input type="text" class="form-control" name="FirstName" placeholder="FirstName" required> 
+			    <input type="text" class="form-control" name="FirstName" id="FirstName" placeholder="FirstName" required> 
 
    <label for="IDNumber"><h3><b>ID Number</label></b></h3>
-			    <input type="text" class="form-control" name="IDNumber" placeholder="IDNumber" required> 
+			    <input type="text" class="form-control" name="IDNumber" id="IDNumber" placeholder="IDNumber" required> 
         
-    <button type="submit">Login</button><br>
+    <button type="submit" name="submit" id="submit">Login</button><br>
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
