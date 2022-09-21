@@ -5,6 +5,8 @@ $username = "root1";
 $password = "password";
 $dbname = "dogregistrationke";
 $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+echo "mary";
 //check connection
 if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
