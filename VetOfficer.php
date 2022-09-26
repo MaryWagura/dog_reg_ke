@@ -1,7 +1,7 @@
 <?php
  $servername = "localhost";
-$username = "root";
-$password = "";
+$username = "root1";
+$password = "password";
 $dbname = "dogregistrationke";
 // Create connection
 $conn= new mysqli($servername, $username, $password,$dbname);
@@ -101,8 +101,8 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
          
          <?php
          $servername = "localhost";
-$username = "root";
-$password = "";
+$username = "root1";
+$password = "password";
 $dbname = "dogregistrationke";
 $OwnerID="OwnerID";
 // Create connection
@@ -217,8 +217,7 @@ if ($conn->connect_error) {
     <input  type="submit" value="Submit"></center><br>
 </form>
 
-<center>  <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Africa%2FNairobi&amp;src=dGlzaG1jY2xhaW45QGdtYWlsLmNvbQ&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=ZW4ua2UjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23039BE5&amp;color=%2333B679&amp;color=%230B8043" style="border-width:0" width="500" height="500" frameborder="0" scrolling="no"></iframe></center>
-
+<center>  <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Africa%2FNairobi&title=Dog%20Registration%20KE%20Vaccination%20Calendar&src=d2FndXJhbWFyaWVAZ21haWwuY29t&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4tZ2Iua2UjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039BE5&color=%2333B679&color=%230B8043" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe></center>
  </div>
 
 

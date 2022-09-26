@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <title>Terminate Licenses</title>
 </head>
 <body>
   <b><h3>Terminate License</h3></b>
@@ -15,7 +15,7 @@ $dbname = "dogregistrationke";
 $dbname= new mysqli($servername, $username, $password,$dbname);
 
  $result=$dbname->query("SELECT * FROM ownerinformation") or die ("Couldn't connect".mysqli_error());
- $row= mysqli_fetch_array($result);
+ $row= mysqli_fetch_array($result)
  ?>
 
 
@@ -28,7 +28,7 @@ $dbname= new mysqli($servername, $username, $password,$dbname);
       $check=$dbname->query("select * from ownerinformation where IDNumber='$key'") or die("the record does not exist").mysqli_error();
       if (mysqli_num_rows($check)>0) 
       {
-         $querydelete=$dbname->query("DELETE from ownerinformation where IDNumber='$key'") or die("NOT DELETED!").mysql_error();?>
+         $querydelete=$dbname->query("delete from ownerinformation where IDNumber='$key'") or die("NOT DELETED!").mysql_error();?>
         <div class="alert alert-success">
           <p>Record Deleted successfully!</p>
         </div>
@@ -53,13 +53,13 @@ $dbname= new mysqli($servername, $username, $password,$dbname);
       <th>ID Number</th>
       <th>Phone Number</th>
       <th>Email</th>
-      <th>Age</th>
       <th>Gender</th>
       <th>Location</th>
     </tr>
     <?php
     $sr=1;
     while ($row=mysqli_fetch_array($result)) {
+      
       ?>
      <tr>
      <form action="" method="post" role="form">
@@ -69,7 +69,6 @@ $dbname= new mysqli($servername, $username, $password,$dbname);
         <td><?php echo $row['IDNumber'];?></td>
          <td><?php echo $row['PhoneNumber'];?></td>
           <td><?php echo $row['Email'];?></td>
-           <td><?php echo $row['Age'];?></td>
             <td><?php echo $row['Gender'];?></td>
              <td><?php echo $row['Location'];?></td>
              <td>
@@ -189,9 +188,4 @@ $dbname= new mysqli($servername, $username, $password,$dbname);
 </style>
 
 </head>
-<body>
-    <div class="container">
-        <div class="table-wrapper">
-            
-</body>
 </html>                            

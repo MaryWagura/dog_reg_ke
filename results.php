@@ -92,8 +92,8 @@ ID Number: <input type="text" name="OwnerID" required>
 
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "";
+$username = "root1";
+$password = "password";
 $dbname = "dogregistrationke";
 // Create connection
 $conn= new mysqli($servername, $username, $password,$dbname);
