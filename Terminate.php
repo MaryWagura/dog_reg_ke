@@ -7,6 +7,9 @@
   <b><h3>Terminate License</h3></b>
 
   <?php
+  ini_set('display_errors', 1);
+  ini_set('display_startup_errors', 1);
+  error_reporting(E_ALL);
 session_start();
 $servername = "localhost";
 $username = "root1";
@@ -59,11 +62,14 @@ $dbname= new mysqli($servername, $username, $password,$dbname);
     <?php
     $sr=1;
     while ($row=mysqli_fetch_array($result)) {
+      var_dump($row);
+      echo $row;
+      echo "hi";
       
       ?>
      <tr>
      <form action="" method="post" role="form">
-     <td><?php echo $sr;?></td>
+     <td><?php echo  $sr;?></td>
       <td><?php echo $row['FirstName'];?></td>
        <td><?php echo $row['LastName'];?></td>
         <td><?php echo $row['IDNumber'];?></td>
