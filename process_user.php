@@ -12,7 +12,7 @@ $IDNumber=$_POST ['IDNumber'];
 
    $dbname= new mysqli($servername, $username, $password,$dbname);
  
- $result=$dbname->query("SELECT * FROM ownerinformation where FirstName='$FirstName' and IDNumber ='$IDNumber'") or die("Failed to query DB".mysql_error());
+ $result=$dbname->query("SELECT * FROM ownerinformation where FirstName='$FirstName' and IDNumber ='$IDNumber'") or die("Failed to query DB");
  $row= mysqli_fetch_array($result);
 
  if ($row['FirstName']==$FirstName && $row['IDNumber']==$IDNumber) {
@@ -44,7 +44,7 @@ $IDNumber=$_POST ['IDNumber'];
    $conn= new mysqli($servername, $username, $password,$dbname);
 
 
-     $result=$conn->query("SELECT * FROM admindetails where FirstName='$FirstName' and IDNumber ='$IDNumber'") or die("Failed to query DB".mysql_error());
+     $result=$conn->query("SELECT * FROM admindetails where FirstName='$FirstName' and IDNumber ='$IDNumber'") or die("Failed to query DB");
  $row= mysqli_fetch_array($result);
 
  if ($row['FirstName']==$FirstName && $row['IDNumber']==$IDNumber) {
@@ -79,7 +79,7 @@ $IDNumber=$_POST ['IDNumber'];
    $conn= new mysqli($servername, $username, $password,$dbname);
 
 
-     $result=$conn->query("SELECT * FROM vetdetails where FirstName='$FirstName' and IDNumber ='$IDNumber'") or die("Failed to query DB".mysql_error());
+     $result=$conn->query("SELECT * FROM vetdetails where FirstName='$FirstName' and IDNumber ='$IDNumber'") or die("Failed to query DB");
  $row= mysqli_fetch_array($result);
 
  if ($row['FirstName']==$FirstName && $row['IDNumber']==$IDNumber) {

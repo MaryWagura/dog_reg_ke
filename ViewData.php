@@ -14,7 +14,7 @@ $dbname= new mysqli($servername, $username, $password,$dbname);
 
  $result=$dbname->query("SELECT * FROM ownerinformation ") or die("Failed to query DB".mysqli_error($dbname));
 
-  $rows= mysqli_fetch_array($result);
+ 
 
 
   
@@ -64,7 +64,7 @@ $dbname= new mysqli($servername, $username, $password,$dbname);
             </tr>
             <?php
             while($rows=mysqli_fetch_array($result))
-            var_dump($rows);
+      
             {
                 ?>
 
@@ -99,7 +99,7 @@ $dbname= new mysqli($servername, $username, $password,$dbname);
 
  $result=$dbname->query("SELECT * FROM petdetails ") or die("Failed to query DB".mysqli_error($dbname));
 
-  $rows= mysqli_fetch_array($result);
+ 
 
   
     ?>
@@ -267,9 +267,5 @@ $dbname= new mysqli($servername, $username, $password,$dbname);
 </style>
 
 </head>
-<body>
-    <div class="container">
-        <div class="table-wrapper">
-            
-</body>
+
 </html>                            

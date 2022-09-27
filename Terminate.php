@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Terminate Licenses</title>
+  <title>Terminate Licences</title>
 </head>
 <body>
-  <b><h3>Terminate License</h3></b>
+  <b><h3>Terminate Licenses</h3></b>
 
   <?php
   ini_set('display_errors', 1);
   ini_set('display_startup_errors', 1);
   error_reporting(E_ALL);
 session_start();
+
+
 $servername = "localhost";
 $username = "root1";
 $password = "password";
 $dbname = "dogregistrationke";
 $dbname= new mysqli($servername, $username, $password,$dbname);
 
- $result=$dbname->query("SELECT * FROM ownerinformation") or die ("Couldn't connect".mysqli_error());
- $row= mysqli_fetch_array($result)
+ $result=$dbname->query("SELECT * FROM ownerinformation") or die ("Couldn't connect");
+
+
  ?>
 
 
@@ -28,10 +31,10 @@ $dbname= new mysqli($servername, $username, $password,$dbname);
       $key=$_POST['KeyToDelete'];
    
    #to check if the record exists
-      $check=$dbname->query("select * from ownerinformation where IDNumber='$key'") or die("the record does not exist").mysqli_error();
+      $check=$dbname->query("select * from ownerinformation where IDNumber='$key'") or die("the record does not exist");
       if (mysqli_num_rows($check)>0) 
       {
-         $querydelete=$dbname->query("delete from ownerinformation where IDNumber='$key'") or die("NOT DELETED!").mysql_error();?>
+         $querydelete=$dbname->query("delete from ownerinformation where IDNumber='$key'") or die("NOT DELETED!");?>
         <div class="alert alert-success">
           <p>Record Deleted successfully!</p>
         </div>
@@ -61,22 +64,19 @@ $dbname= new mysqli($servername, $username, $password,$dbname);
     </tr>
     <?php
     $sr=1;
-    while ($row=mysqli_fetch_array($result)) {
-      var_dump($row);
-      echo $row;
-      echo "hi";
-      
+    while ($rows=mysqli_fetch_array($result)) {
+     
       ?>
      <tr>
      <form action="" method="post" role="form">
      <td><?php echo  $sr;?></td>
-      <td><?php echo $row['FirstName'];?></td>
-       <td><?php echo $row['LastName'];?></td>
-        <td><?php echo $row['IDNumber'];?></td>
-         <td><?php echo $row['PhoneNumber'];?></td>
-          <td><?php echo $row['Email'];?></td>
-            <td><?php echo $row['Gender'];?></td>
-             <td><?php echo $row['Location'];?></td>
+      <td><?php echo $rows['FirstName'];?></td>
+       <td><?php echo $rows['LastName'];?></td>
+        <td><?php echo $rows['IDNumber'];?></td>
+         <td><?php echo $rows['PhoneNumber'];?></td>
+          <td><?php echo $rows['Email'];?></td>
+            <td><?php echo $rows['Gender'];?></td>
+             <td><?php echo $rows['Location'];?></td>
              <td>
                <input type="checkbox" name="KeyToDelete" value="<?php echo $row['IDNumber'];?>">
              </td>

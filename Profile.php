@@ -9,14 +9,10 @@ $OwnerID = $_SESSION["OwnerID"];
 $IDNumber = $_SESSION["IDNumber"];
 $FirstName=$_SESSION["FirstName"];
 
-echo $FirstName;
-echo $IDNumber;
-
-
 
  $result=$conn->query("SELECT * FROM ownerinformation ") or die("Failed to query DB".mysqli_error($conn));
 
-  $rows= mysqli_fetch_array($result);
+ 
 
   
     ?>
