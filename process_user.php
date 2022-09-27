@@ -31,9 +31,7 @@ $IDNumber=$_POST ['IDNumber'];
  ?>
 
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+
  $servername = "localhost";
 $username = "root1";
 $password = "password";
@@ -65,7 +63,7 @@ $IDNumber=$_POST ['IDNumber'];
    
  }else
  {
- 	echo "Failed";
+ 	//echo "Failed";
  }
 ?>
 <?php
@@ -100,7 +98,7 @@ $IDNumber=$_POST ['IDNumber'];
    
  }else
  {
- 	echo "Failed";
+ 	//echo "Failed";
  }
 }
 ?>

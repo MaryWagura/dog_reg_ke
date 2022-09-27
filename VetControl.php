@@ -12,7 +12,7 @@ if ($conn->connect_error) {
    } 
 
  $OwnerID=$_POST["OwnerID"];
- $result=$conn->query("SELECT * FROM petdetails where OwnerID ='$OwnerID'") or die("Failed to query DB".mysql_error());
+ $result=$conn->query("SELECT * FROM petdetails where OwnerID ='$OwnerID'") or die("Failed to query DB".mysqli_error($conn));
  $row= mysqli_fetch_array($result);
  
 

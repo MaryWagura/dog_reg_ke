@@ -117,8 +117,8 @@ $result= mysqli_query($conn,"SELECT enthusiasm,walk,vaccine,exercise,trained,int
         echo '<script>alert("The Dog Owner passed the Inpection Test!")</script>';
         echo'<script>window.location="VetOfficer.php"</script>';
     }else{
-    echo $sum." : Fail";
-    echo '<script>alert("Please contact the veterinary offices to book another appointment")</script';
+    echo $sum." : The dog owner Failed";
+    echo '<script>alert("")</script';
     echo '<script>window.location="Profile.php"</script';
 }
 ?>

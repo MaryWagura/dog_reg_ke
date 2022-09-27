@@ -88,7 +88,7 @@ body{
                         <center> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwh5sBr0LLuApAZNKH_nvYphVcqYXs_J_6V3uv_7KBGibyyQu-&s" alt=""/>
                           
                         </div>
-                        <h3 style="  color: #0062cc;">Welcome User!</h3>
+                        <h3 style="  color: #0062cc;">Welcome</h3>
                     </div>
                    
                   

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>REGISTRATION PAGE</title>
+    <title>Register Pet</title>
     <link rel="stylesheet" type="text/css" href="Registerpet.css">
     <div id="Main">
 </head>
@@ -83,9 +83,9 @@
           </div>
           <div class="form-group">
             <label for="Vaccine"><b>Tick the vaccine administered to your dog according to your dog's vaccine book.</label><br>
-                <input type="radio" name="Rabbis" value="Rabbis"><b> Rabbis</b><br>
-                <input type="radio" name="Parvovirus" value="Parvovirus"><b>Parvovirus</b><br>
-                <input type="radio" name="Dewormer" value="Dewormer"><b> Dewormer<br></b><br>
+                <input type="checkbox" name="Rabbis" value="Rabbis"><b> Rabbis</b><br>
+                <input type="checkbox" name="Parvovirus" value="Parvovirus"><b>Parvovirus</b><br>
+                <input type="checkbox" name="Dewormer" value="Dewormer"><b> Dewormer<br></b><br>
             </div>
            <div class="form-group">
             <label for="Image"><b>Upload the dog's image</label><br>
