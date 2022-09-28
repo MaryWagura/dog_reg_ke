@@ -5,12 +5,12 @@ Thus, Dog Registration Kenya, which aims to ensure that kenyan dog owners are re
 
 *Purpose of the project:* 
 1.The purpose of the project is to ensure that dog owners are accountable to their dogs in terms of ensuring that their dogs are vaccinated especially against rabies hence in the long run, reduce rabies infections in the country.<br>
-2.The licences will generate revenue for the county governments. 
-3.Track dog ownership in Kenya.
+2.The licences will generate revenue for the county governments. <br>
+3.Track dog ownership in Kenya.<br>
 
 *Technical Requirements:* 
-Programming languages: PHP, HTML, CSS, BOOTSTRAP, JAVASCRIPT.
-Coding Environment : Visual Studio Code.
-Database : MySQL.
-Hosting Platform: Github, Heroku.
+Programming languages: PHP, HTML, CSS, BOOTSTRAP, JAVASCRIPT.<br>
+Coding Environment : Visual Studio Code.<br>
+Database : MySQL.<br>
+Hosting Platform: Github, Heroku.<br>
 
