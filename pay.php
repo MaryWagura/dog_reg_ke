@@ -6,7 +6,7 @@ require_once('Lipa-Mpesa.php');
 
 if (isset($_POST['submitpay'])) {
 	$phonenumber=$_POST['phonenumber'];
-	$amount=1;
+	$amount=2;
 	$accRef="Dog Registration Kenya";
 	 $access_token = accessTokenGenerator();
 	 mpesaSendMoney($phonenumber, $amount, $accRef, $access_token );

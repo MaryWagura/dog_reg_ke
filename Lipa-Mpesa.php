@@ -4,23 +4,32 @@ session_start();
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+
 function accessTokenGenerator(){
   //Access token
-  $access_token_url = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
-    
-  $curl = curl_init($access_token_url);
-  curl_setopt($curl, CURLOPT_URL, $access_token_url);
-  $credentials = base64_encode('cFJZcjZ6anEwaThMMXp6d1FETUxwWkIzeVBDa2hNc2M6UmYyMkJmWm9nMHFRR2xWOQ==');
-  curl_setopt($curl, CURLOPT_HTTPHEADER, array('Authorization: Basic '.$credentials)); //setting a custom header
-  curl_setopt($curl, CURLOPT_HEADER, false);
-  curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-  curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+  $consumerKey ="30seb4c6qEUVhsmVGFwHbtgUAMXTCSka";
+$consumerSecret = "Ev4Av18m4ZMwzznY";
+
+
+  
+$headers=['Content-Type:application/json; charset=utf8'];
+
+$url = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
+$curl=curl_init($url);
+curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
+curl_setopt($curl, CURLOPT_HEADER, FALSE);
+curl_setopt($curl, CURLOPT_USERPWD, $consumerKey.":".$consumerSecret);
+$credentials = base64_encode('VEV5SkhsWFFSQkxBdFJBR2c2S3A1N2x3amtlUVc5Z0Y6UVBWdVNuNUVrUk1hazJHQQ');
+  
 
   $curl_response = curl_exec($curl);//Contains the access token and the time it takes to expire
 
   $access_token = json_decode($curl_response)->access_token;
-echo $curl_response;
-   var_dump( $access_token); //Testing works.
+ // var_dump( $access_token); 
+
+//echo $curl_response;
+//Testing works.
   curl_close($curl);
   return $access_token;
   
@@ -73,19 +82,17 @@ function mpesaSendMoney($phone_no, $total_amt, $accRef, $access_token ){
   $curl_response = curl_exec($curl);
  // print_r($curl_response);
  //echo $curl_response;
+exit;
 
- exit("failed here");
-
-  if($curl_response)
-  {
-    echo '<script>alert("You payment was received!")</script>';
-    echo'<script>window.location="Login.php"</script>';
-  }else 
-  echo '<script>alert("The payment failed")</script>';
-  echo'<script>window.location="Payment.php"</script>';
-}
+//   if($curl_response)
+//   {
+//     echo '<script>alert("You payment was received!")</script>';
+//     echo'<script>window.location="Login.php"</script>';
+//   }else 
+//   echo '<script>alert("The payment failed")</script>';
+//   echo'<script>window.location="Payment.php"</script>';
+// }
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-
-?>
+}
