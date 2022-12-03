@@ -18,8 +18,6 @@ $Gender=$_POST ['gender'];
 $Location=$_POST ['Location'];
 
 
-
-
     $sql = "INSERT INTO ownerinformation(FirstName, LastName, IDNumber, PhoneNumber, Email,  Gender, Location)
 VALUES ('$FirstName', '$LastName', '$IDNumber', '$PhoneNumber','$Email','$Gender','$Location')";
 

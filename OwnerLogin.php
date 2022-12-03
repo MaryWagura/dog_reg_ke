@@ -1,8 +1,8 @@
 <?php
 session_start();
 $servername = "localhost";
-$username = "root";
-$password = "";
+$username = "root1";
+$password = "password";
 $dbname = "dogregistrationke";
 if ($_SESSION{"ownerinformation"}==true) 
 {

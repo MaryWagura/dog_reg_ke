@@ -23,7 +23,7 @@ $IDNumber=$_POST ['IDNumber'];
  	$_SESSION["IDNumber"] = $IDNumber;
  	$_SESSION["OwnerID"] = $row['IDNumber'];
     echo "Login Successful Welcome ".$row['FirstName'] ;
-    header("Refresh: 1; url=OwnerLogin.php");
+    header("Refresh: 1; url=Profile.php");
      }else
  {
  	echo "Failed";
