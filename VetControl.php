@@ -36,6 +36,7 @@ $sql = "INSERT INTO inspection (OwnerID, enthusiasm, walk, vaccine
 , exercise, trained, interacts, healthy, active)
 VALUES ('$OwnerID', '$enthusiasm', '$walk', '$vaccine', '$exercise','$trained','$interacts','$healthy','$active')";
   if ($conn->query($sql) === TRUE) {
+    echo "The results have been recorded";
     header('Location:VetOfficer.php');
  
 } else {
